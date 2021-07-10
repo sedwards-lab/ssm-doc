@@ -23,6 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ssm
    </div>
+   <div id="projectbrief">Runtime Library for the Sparse Synchronous Model</div>
   </td>
  </tr>
  </tbody>
@@ -61,7 +62,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">ssm_trigger Struct Reference</div>  </div>
+<div class="title">ssm_trigger Struct Reference<div class="ingroups"><a class="el" href="group__all.html">All</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -81,28 +82,32 @@ Collaboration diagram for ssm_trigger:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:aae428fca2593d8dbf549bbef7c6c50a1"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structssm__trigger.html">ssm_trigger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__trigger.html#aae428fca2593d8dbf549bbef7c6c50a1">next</a></td></tr>
+<tr class="memdesc:aae428fca2593d8dbf549bbef7c6c50a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Next sensitive trigger, if any.  <a href="#aae428fca2593d8dbf549bbef7c6c50a1">More...</a><br /></td></tr>
 <tr class="separator:aae428fca2593d8dbf549bbef7c6c50a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02e4f57558c15177d31cab3463012df0"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structssm__trigger.html">ssm_trigger</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__trigger.html#a02e4f57558c15177d31cab3463012df0">prev_ptr</a></td></tr>
+<tr class="memdesc:a02e4f57558c15177d31cab3463012df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to ourself in previous list element.  <a href="#a02e4f57558c15177d31cab3463012df0">More...</a><br /></td></tr>
 <tr class="separator:a02e4f57558c15177d31cab3463012df0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a7f9c5d5d37ca9f0224849939951551"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structssm__act.html">ssm_act</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__trigger.html#a5a7f9c5d5d37ca9f0224849939951551">act</a></td></tr>
-<tr class="separator:a5a7f9c5d5d37ca9f0224849939951551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ddb52a0cad16eb04c5b52632296236b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__all.html#ga5e1c601834c7aedca3154c05aec49700">ssm_act_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__trigger.html#a3ddb52a0cad16eb04c5b52632296236b">act</a></td></tr>
+<tr class="memdesc:a3ddb52a0cad16eb04c5b52632296236b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Routine triggered by this channel variable.  <a href="#a3ddb52a0cad16eb04c5b52632296236b">More...</a><br /></td></tr>
+<tr class="separator:a3ddb52a0cad16eb04c5b52632296236b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Indicates a routine should run when a scheduled variable is written. </p>
 <p>Node in linked list of activation records, maintained by each scheduled variable to determine which continuations should be scheduled when the variable is updated. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a5a7f9c5d5d37ca9f0224849939951551"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a7f9c5d5d37ca9f0224849939951551">&#9670;&nbsp;</a></span>act</h2>
+<a id="a3ddb52a0cad16eb04c5b52632296236b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ddb52a0cad16eb04c5b52632296236b">&#9670;&nbsp;</a></span>act</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structssm__act.html">ssm_act</a>* act</td>
+          <td class="memname"><a class="el" href="group__all.html#ga5e1c601834c7aedca3154c05aec49700">ssm_act_t</a>* act</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Routine triggered by this channel variable </p>
+
+<p>Routine triggered by this channel variable. </p>
 
 </div>
 </div>
@@ -117,7 +122,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Next sensitive trigger, if any </p>
+
+<p>Next sensitive trigger, if any. </p>
 
 </div>
 </div>
@@ -132,12 +138,13 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Pointer to ourself in previous list element </p>
+
+<p>Pointer to ourself in previous list element. </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/mnt/sedwards/group/projects/bdl/ssm/include/<a class="el" href="ssm_8h_source.html">ssm.h</a></li>
+<li><a class="el" href="ssm_8h_source.html">ssm.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

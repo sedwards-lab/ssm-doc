@@ -1,12 +1,14 @@
 var indexSectionsWithContent =
 {
-  0: "acdefilmnpqstu",
+  0: "acdefilmnpqstuv",
   1: "s",
   2: "s",
   3: "fs",
-  4: "acdelnpstu",
+  4: "acdelnpstuv",
   5: "iqsu",
-  6: "cms"
+  6: "s",
+  7: "a",
+  8: "a"
 };
 
 var indexSectionNames =
@@ -17,7 +19,9 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "typedefs",
-  6: "defines"
+  6: "defines",
+  7: "groups",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -28,6 +32,8 @@ var indexSectionLabels =
   3: "Functions",
   4: "Variables",
   5: "Typedefs",
-  6: "Macros"
+  6: "Macros",
+  7: "Modules",
+  8: "Pages"
 };
 

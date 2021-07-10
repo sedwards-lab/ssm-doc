@@ -23,6 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ssm
    </div>
+   <div id="projectbrief">Runtime Library for the Sparse Synchronous Model</div>
   </td>
  </tr>
  </tbody>
@@ -61,7 +62,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">ssm_sv Struct Reference</div>  </div>
+<div class="title">ssm_sv Struct Reference<div class="ingroups"><a class="el" href="group__all.html">All</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -82,12 +83,16 @@ Collaboration diagram for ssm_sv:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a381ce30c20b1c1ac95ace4cb611ee19d"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__sv.html#a381ce30c20b1c1ac95ace4cb611ee19d">update</a> )(struct <a class="el" href="structssm__sv.html">ssm_sv</a> *)</td></tr>
+<tr class="memdesc:a381ce30c20b1c1ac95ace4cb611ee19d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update "virtual method".  <a href="#a381ce30c20b1c1ac95ace4cb611ee19d">More...</a><br /></td></tr>
 <tr class="separator:a381ce30c20b1c1ac95ace4cb611ee19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8384294d1b77a82ee357b19b9865dc61"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structssm__trigger.html">ssm_trigger</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__sv.html#a8384294d1b77a82ee357b19b9865dc61">triggers</a></td></tr>
-<tr class="separator:a8384294d1b77a82ee357b19b9865dc61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2527ff359c176c26db2570b0216ba9da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm_8h.html#ae963c119a7847a3327202eacb31f66ca">ssm_time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__sv.html#a2527ff359c176c26db2570b0216ba9da">later_time</a></td></tr>
+<tr class="memitem:add57450d6e98f2d5734f44ec3d00a8ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__all.html#ga4b8d723d349f000899a3e00d47e0d0c2">ssm_trigger_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__sv.html#add57450d6e98f2d5734f44ec3d00a8ca">triggers</a></td></tr>
+<tr class="memdesc:add57450d6e98f2d5734f44ec3d00a8ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of sensitive continuations.  <a href="#add57450d6e98f2d5734f44ec3d00a8ca">More...</a><br /></td></tr>
+<tr class="separator:add57450d6e98f2d5734f44ec3d00a8ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2527ff359c176c26db2570b0216ba9da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__sv.html#a2527ff359c176c26db2570b0216ba9da">later_time</a></td></tr>
+<tr class="memdesc:a2527ff359c176c26db2570b0216ba9da"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the variable should be next updated.  <a href="#a2527ff359c176c26db2570b0216ba9da">More...</a><br /></td></tr>
 <tr class="separator:a2527ff359c176c26db2570b0216ba9da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8789bb37d54b70b671b6286befaf711e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm_8h.html#ae963c119a7847a3327202eacb31f66ca">ssm_time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__sv.html#a8789bb37d54b70b671b6286befaf711e">last_updated</a></td></tr>
+<tr class="memitem:a8789bb37d54b70b671b6286befaf711e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__sv.html#a8789bb37d54b70b671b6286befaf711e">last_updated</a></td></tr>
+<tr class="memdesc:a8789bb37d54b70b671b6286befaf711e"><td class="mdescLeft">&#160;</td><td class="mdescRight">When the variable was last updated.  <a href="#a8789bb37d54b70b671b6286befaf711e">More...</a><br /></td></tr>
 <tr class="separator:a8789bb37d54b70b671b6286befaf711e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -96,7 +101,7 @@ Data Fields</h2></td></tr>
 <p>On its own, this represents a pure event variable, i.e., a scheduled variable with no data/payload.</p>
 <p>The update field must point to code that copies the new value of the scheduled variable into its current value. For pure events, this function may do nothing, but the pointer must be non-zero.</p>
 <p>This can also be embedded in a wrapper struct/class to implement a scheduled variable with a payload. In this case, the payload should also be embedded in that wrapper class, and the vtable should have update/assign/later methods specialized to be aware of the size and layout of the wrapper class.</p>
-<p>An invariant: <a class="el" href="structssm__sv.html#a2527ff359c176c26db2570b0216ba9da">later_time</a> != <a class="el" href="ssm_8h.html#a21ad50b0c4e1feeaeb9c78af1a9d2d9f" title="Time used to indicate something will never happen. ">SSM_NEVER</a> if and only if this variable in the event queue. </p>
+<p>An invariant: <a class="el" href="structssm__sv.html#a2527ff359c176c26db2570b0216ba9da" title="When the variable should be next updated. ">later_time</a> != <a class="el" href="group__all.html#ga21ad50b0c4e1feeaeb9c78af1a9d2d9f" title="Time indicating something will never happen. ">SSM_NEVER</a> if and only if this variable in the event queue. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a8789bb37d54b70b671b6286befaf711e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8789bb37d54b70b671b6286befaf711e">&#9670;&nbsp;</a></span>last_updated</h2>
@@ -105,11 +110,12 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ssm_8h.html#ae963c119a7847a3327202eacb31f66ca">ssm_time_t</a> last_updated</td>
+          <td class="memname"><a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a> last_updated</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>When the variable was last updated </p>
+
+<p>When the variable was last updated. </p>
 
 </div>
 </div>
@@ -120,26 +126,28 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ssm_8h.html#ae963c119a7847a3327202eacb31f66ca">ssm_time_t</a> later_time</td>
+          <td class="memname"><a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a> later_time</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>When the variable should be next updated </p>
+
+<p>When the variable should be next updated. </p>
 
 </div>
 </div>
-<a id="a8384294d1b77a82ee357b19b9865dc61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8384294d1b77a82ee357b19b9865dc61">&#9670;&nbsp;</a></span>triggers</h2>
+<a id="add57450d6e98f2d5734f44ec3d00a8ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add57450d6e98f2d5734f44ec3d00a8ca">&#9670;&nbsp;</a></span>triggers</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structssm__trigger.html">ssm_trigger</a>* triggers</td>
+          <td class="memname"><a class="el" href="group__all.html#ga4b8d723d349f000899a3e00d47e0d0c2">ssm_trigger_t</a>* triggers</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>List of sensitive continuations </p>
+
+<p>List of sensitive continuations. </p>
 
 </div>
 </div>
@@ -154,12 +162,13 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Update "virtual method" </p>
+
+<p>Update "virtual method". </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/mnt/sedwards/group/projects/bdl/ssm/include/<a class="el" href="ssm_8h_source.html">ssm.h</a></li>
+<li><a class="el" href="ssm_8h_source.html">ssm.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

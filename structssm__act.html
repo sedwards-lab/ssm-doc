@@ -23,6 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">ssm
    </div>
+   <div id="projectbrief">Runtime Library for the Sparse Synchronous Model</div>
   </td>
  </tr>
  </tbody>
@@ -61,7 +62,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">ssm_act Struct Reference</div>  </div>
+<div class="title">ssm_act Struct Reference<div class="ingroups"><a class="el" href="group__all.html">All</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -73,30 +74,35 @@ $(function() {
 Collaboration diagram for ssm_act:</div>
 <div class="dyncontent">
 <div class="center"><img src="structssm__act__coll__graph.png" border="0" usemap="#ssm__act_coll__map" alt="Collaboration graph"/></div>
-<map name="ssm__act_coll__map" id="ssm__act_coll__map">
-</map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:abeaed0d0bd520d546e34eab27ef2242e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm_8h.html#adb557bb02081e7d883bcc7d133eb96f6">ssm_stepf_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__act.html#abeaed0d0bd520d546e34eab27ef2242e">step</a></td></tr>
+<tr class="memitem:abeaed0d0bd520d546e34eab27ef2242e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__all.html#gadb557bb02081e7d883bcc7d133eb96f6">ssm_stepf_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__act.html#abeaed0d0bd520d546e34eab27ef2242e">step</a></td></tr>
+<tr class="memdesc:abeaed0d0bd520d546e34eab27ef2242e"><td class="mdescLeft">&#160;</td><td class="mdescRight">C function for running this continuation.  <a href="#abeaed0d0bd520d546e34eab27ef2242e">More...</a><br /></td></tr>
 <tr class="separator:abeaed0d0bd520d546e34eab27ef2242e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9841b4a563edce9c22ffc29c4ef4c164"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structssm__act.html">ssm_act</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__act.html#a9841b4a563edce9c22ffc29c4ef4c164">caller</a></td></tr>
+<tr class="memdesc:a9841b4a563edce9c22ffc29c4ef4c164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activation record of caller.  <a href="#a9841b4a563edce9c22ffc29c4ef4c164">More...</a><br /></td></tr>
 <tr class="separator:a9841b4a563edce9c22ffc29c4ef4c164"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af21633fb74a6aa87c93baf3caaa58864"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__act.html#af21633fb74a6aa87c93baf3caaa58864">pc</a></td></tr>
+<tr class="memdesc:af21633fb74a6aa87c93baf3caaa58864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stored "program counter" for the function.  <a href="#af21633fb74a6aa87c93baf3caaa58864">More...</a><br /></td></tr>
 <tr class="separator:af21633fb74a6aa87c93baf3caaa58864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ecbbda7bed718687040306d1a1e42bb"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__act.html#a1ecbbda7bed718687040306d1a1e42bb">children</a></td></tr>
+<tr class="memdesc:a1ecbbda7bed718687040306d1a1e42bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of running child threads.  <a href="#a1ecbbda7bed718687040306d1a1e42bb">More...</a><br /></td></tr>
 <tr class="separator:a1ecbbda7bed718687040306d1a1e42bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a187a3fb65f0ab05b439b69cb2d4069a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm_8h.html#af0599e969847088348147d8fb9a7bd82">ssm_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__act.html#a187a3fb65f0ab05b439b69cb2d4069a9">priority</a></td></tr>
+<tr class="memitem:a187a3fb65f0ab05b439b69cb2d4069a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__all.html#gaf0599e969847088348147d8fb9a7bd82">ssm_priority_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__act.html#a187a3fb65f0ab05b439b69cb2d4069a9">priority</a></td></tr>
+<tr class="memdesc:a187a3fb65f0ab05b439b69cb2d4069a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execution priority; lower goes first.  <a href="#a187a3fb65f0ab05b439b69cb2d4069a9">More...</a><br /></td></tr>
 <tr class="separator:a187a3fb65f0ab05b439b69cb2d4069a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68649bf52d561f07afb5e9b008df1039"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm_8h.html#a22bed0d9ef54aa307caef28a6b3fe010">ssm_depth_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__act.html#a68649bf52d561f07afb5e9b008df1039">depth</a></td></tr>
+<tr class="memitem:a68649bf52d561f07afb5e9b008df1039"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__all.html#ga22bed0d9ef54aa307caef28a6b3fe010">ssm_depth_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__act.html#a68649bf52d561f07afb5e9b008df1039">depth</a></td></tr>
+<tr class="memdesc:a68649bf52d561f07afb5e9b008df1039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index of the LSB in our priority.  <a href="#a68649bf52d561f07afb5e9b008df1039">More...</a><br /></td></tr>
 <tr class="separator:a68649bf52d561f07afb5e9b008df1039"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af355f64d47598017faf10e3147db1be6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structssm__act.html#af355f64d47598017faf10e3147db1be6">scheduled</a></td></tr>
+<tr class="memdesc:af355f64d47598017faf10e3147db1be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">True when in the schedule queue.  <a href="#af355f64d47598017faf10e3147db1be6">More...</a><br /></td></tr>
 <tr class="separator:af355f64d47598017faf10e3147db1be6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Activation record for an SSM routine. </p>
-<p>Routine activation record "base class." A struct for a particular routine must start with this type but then may be followed by routine-specific fields </p>
+<p>Routine activation record "base class." A struct for a particular routine must start with this type but then may be followed by routine-specific fields. See SSM_ACT_FIELDS </p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a9841b4a563edce9c22ffc29c4ef4c164"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9841b4a563edce9c22ffc29c4ef4c164">&#9670;&nbsp;</a></span>caller</h2>
@@ -109,7 +115,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Activation record of caller </p>
+
+<p>Activation record of caller. </p>
 
 </div>
 </div>
@@ -124,7 +131,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Number of running child threads </p>
+
+<p>Number of running child threads. </p>
 
 </div>
 </div>
@@ -135,11 +143,12 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ssm_8h.html#a22bed0d9ef54aa307caef28a6b3fe010">ssm_depth_t</a> depth</td>
+          <td class="memname"><a class="el" href="group__all.html#ga22bed0d9ef54aa307caef28a6b3fe010">ssm_depth_t</a> depth</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Index of the LSB in our priority </p>
+
+<p>Index of the LSB in our priority. </p>
 
 </div>
 </div>
@@ -154,7 +163,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Stored "program counter" for the function </p>
+
+<p>Stored "program counter" for the function. </p>
 
 </div>
 </div>
@@ -165,11 +175,12 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ssm_8h.html#af0599e969847088348147d8fb9a7bd82">ssm_priority_t</a> priority</td>
+          <td class="memname"><a class="el" href="group__all.html#gaf0599e969847088348147d8fb9a7bd82">ssm_priority_t</a> priority</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Execution priority; lower goes first </p>
+
+<p>Execution priority; lower goes first. </p>
 
 </div>
 </div>
@@ -184,7 +195,8 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>True when in the schedule queue </p>
+
+<p>True when in the schedule queue. </p>
 
 </div>
 </div>
@@ -195,16 +207,17 @@ Data Fields</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ssm_8h.html#adb557bb02081e7d883bcc7d133eb96f6">ssm_stepf_t</a>* step</td>
+          <td class="memname"><a class="el" href="group__all.html#gadb557bb02081e7d883bcc7d133eb96f6">ssm_stepf_t</a>* step</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>C function for running this continuation </p>
+
+<p>C function for running this continuation. </p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/mnt/sedwards/group/projects/bdl/ssm/include/<a class="el" href="ssm_8h_source.html">ssm.h</a></li>
+<li><a class="el" href="ssm_8h_source.html">ssm.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

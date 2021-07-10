@@ -1,23 +1,6 @@
 var searchData=
 [
-  ['ssm_5fact_5ffields',['SSM_ACT_FIELDS',['../ssm_8h.html#ae10a52359c2422abd99bd3a6236e91bc',1,'ssm.h']]],
-  ['ssm_5fact_5ffree',['SSM_ACT_FREE',['../ssm_8h.html#a31158c14f8d6a53efee7ee9faa179cfb',1,'ssm.h']]],
-  ['ssm_5fact_5fmalloc',['SSM_ACT_MALLOC',['../ssm_8h.html#ac703695fcbfaceff44dce01f49b5c817',1,'ssm.h']]],
   ['ssm_5fact_5fqueue_5fsize',['SSM_ACT_QUEUE_SIZE',['../ssm-scheduler_8c.html#a25ce0218229260d51bbeb62864dc90d0',1,'ssm-scheduler.c']]],
-  ['ssm_5fassign_5fevent',['ssm_assign_event',['../ssm_8h.html#a827a811f2494e23191c5e275af02d271',1,'ssm.h']]],
-  ['ssm_5fdeclare_5fsv_5fscalar',['SSM_DECLARE_SV_SCALAR',['../ssm_8h.html#a2304a2a62f43345b828ad8159c019855',1,'ssm.h']]],
-  ['ssm_5fdefine_5fsv_5fscalar',['SSM_DEFINE_SV_SCALAR',['../ssm_8h.html#a1ec147464b20072881807072b6b6c57d',1,'ssm.h']]],
   ['ssm_5fevent_5fqueue_5fsize',['SSM_EVENT_QUEUE_SIZE',['../ssm-scheduler_8c.html#a212bc77e666ea29840c6201cc5d606d6',1,'ssm-scheduler.c']]],
-  ['ssm_5fhour',['SSM_HOUR',['../ssm_8h.html#aa197d42e5baeef09b2106f2b07fe6878',1,'ssm.h']]],
-  ['ssm_5flater_5fevent',['ssm_later_event',['../ssm_8h.html#a2eedea66e844068b06b3ac9e191eaa45',1,'ssm.h']]],
-  ['ssm_5fmicrosecond',['SSM_MICROSECOND',['../ssm_8h.html#a8dd6febe35c5ff0c4ff8d1d43ef6f33c',1,'ssm.h']]],
-  ['ssm_5fmillisecond',['SSM_MILLISECOND',['../ssm_8h.html#aa14d35334559e91259d76ebfd22e367b',1,'ssm.h']]],
-  ['ssm_5fminute',['SSM_MINUTE',['../ssm_8h.html#aac175bedf4cfeb48775f5eeeb90b9d62',1,'ssm.h']]],
-  ['ssm_5fnanosecond',['SSM_NANOSECOND',['../ssm_8h.html#a72dc193a581421c30fd63abe6b628bdd',1,'ssm.h']]],
-  ['ssm_5fnever',['SSM_NEVER',['../ssm_8h.html#a21ad50b0c4e1feeaeb9c78af1a9d2d9f',1,'ssm.h']]],
-  ['ssm_5fqueue_5fhead',['SSM_QUEUE_HEAD',['../ssm-scheduler_8c.html#aebf47b5a148097c1cb9d146071828637',1,'ssm-scheduler.c']]],
-  ['ssm_5fresources_5fexhausted',['SSM_RESOURCES_EXHAUSTED',['../ssm_8h.html#a0489a05572c0c675fd7eeee65e8b40e3',1,'ssm.h']]],
-  ['ssm_5froot_5fdepth',['SSM_ROOT_DEPTH',['../ssm_8h.html#a50b5df0fe51a91d9667ec34eecc9210a',1,'ssm.h']]],
-  ['ssm_5froot_5fpriority',['SSM_ROOT_PRIORITY',['../ssm_8h.html#abea6090ce063ae674b31fc2ded743d4b',1,'ssm.h']]],
-  ['ssm_5fsecond',['SSM_SECOND',['../ssm_8h.html#abb9966b40b15940a870b290963bde8fe',1,'ssm.h']]]
+  ['ssm_5fqueue_5fhead',['SSM_QUEUE_HEAD',['../ssm-scheduler_8c.html#aebf47b5a148097c1cb9d146071828637',1,'ssm-scheduler.c']]]
 ];

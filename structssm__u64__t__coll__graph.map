@@ -1,0 +1,5 @@
+<map id="ssm_u64_t" name="ssm_u64_t">
+<area shape="rect" id="node2" href="$structssm__sv.html" title="A variable that may have scheduled updates and triggers. " alt="" coords="17,187,85,213"/>
+<area shape="rect" id="node3" href="$structssm__trigger.html" title="Indicates a routine should run when a scheduled variable is written. " alt="" coords="5,96,96,123"/>
+<area shape="rect" id="node4" href="$structssm__act.html" title="Activation record for an SSM routine. " alt="" coords="15,5,87,32"/>
+</map>
