@@ -2,6 +2,7 @@ var searchData=
 [
   ['scheduled',['scheduled',['../structssm__act.html#af355f64d47598017faf10e3147db1be6',1,'ssm_act']]],
   ['ssm_2dbool_2ec',['ssm-bool.c',['../ssm-bool_8c.html',1,'']]],
+  ['ssm_2ddebug_2eh',['ssm-debug.h',['../ssm-debug_8h.html',1,'']]],
   ['ssm_2devent_2ec',['ssm-event.c',['../ssm-event_8c.html',1,'']]],
   ['ssm_2di16_2ec',['ssm-i16.c',['../ssm-i16_8c.html',1,'']]],
   ['ssm_2di32_2ec',['ssm-i32.c',['../ssm-i32_8c.html',1,'']]],
@@ -96,6 +97,7 @@ var searchData=
   ['ssm_5fu32_5ft',['ssm_u32_t',['../structssm__u32__t.html',1,'']]],
   ['ssm_5fu64_5ft',['ssm_u64_t',['../structssm__u64__t.html',1,'']]],
   ['ssm_5fu8_5ft',['ssm_u8_t',['../structssm__u8__t.html',1,'']]],
+  ['ssm_5funschedule',['ssm_unschedule',['../group__all.html#ga507f4f10f494c4bf1d9254e32a976c09',1,'ssm_unschedule(struct ssm_sv *var):&#160;ssm-scheduler.c'],['../group__all.html#ga507f4f10f494c4bf1d9254e32a976c09',1,'ssm_unschedule(ssm_sv_t *var):&#160;ssm-scheduler.c']]],
   ['ssm_5fupdate_5fevent',['ssm_update_event',['../ssm-event_8c.html#a9cb328a999280c790dbc0ee742bc7c5d',1,'ssm-event.c']]],
   ['step',['step',['../structssm__act.html#abeaed0d0bd520d546e34eab27ef2242e',1,'ssm_act']]],
   ['sv',['sv',['../structssm__bool__t.html#a6f6ff71d662f32a1fb111b0e40616379',1,'ssm_bool_t::sv()'],['../structssm__i8__t.html#a6f6ff71d662f32a1fb111b0e40616379',1,'ssm_i8_t::sv()'],['../structssm__i16__t.html#a6f6ff71d662f32a1fb111b0e40616379',1,'ssm_i16_t::sv()'],['../structssm__i32__t.html#a6f6ff71d662f32a1fb111b0e40616379',1,'ssm_i32_t::sv()'],['../structssm__i64__t.html#a6f6ff71d662f32a1fb111b0e40616379',1,'ssm_i64_t::sv()'],['../structssm__u8__t.html#a6f6ff71d662f32a1fb111b0e40616379',1,'ssm_u8_t::sv()'],['../structssm__u16__t.html#a6f6ff71d662f32a1fb111b0e40616379',1,'ssm_u16_t::sv()'],['../structssm__u32__t.html#a6f6ff71d662f32a1fb111b0e40616379',1,'ssm_u32_t::sv()'],['../structssm__u64__t.html#a6f6ff71d662f32a1fb111b0e40616379',1,'ssm_u64_t::sv()']]]

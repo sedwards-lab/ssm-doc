@@ -43,5 +43,6 @@ var searchData=
   ['ssm_5ftick',['ssm_tick',['../group__all.html#ga403b1a8afd439aae4c7290ac791c6745',1,'ssm_tick():&#160;ssm-scheduler.c'],['../group__all.html#ga403b1a8afd439aae4c7290ac791c6745',1,'ssm_tick():&#160;ssm-scheduler.c']]],
   ['ssm_5ftop_5freturn',['ssm_top_return',['../ssm-top-act_8c.html#ad97966a1ab94482fd0f37f7915543f06',1,'ssm-top-act.c']]],
   ['ssm_5ftrigger',['ssm_trigger',['../group__all.html#gabe1e877f8f28d0dc2015f4abd3e3aa69',1,'ssm_trigger(struct ssm_sv *var, ssm_priority_t priority):&#160;ssm-scheduler.c'],['../group__all.html#gabe1e877f8f28d0dc2015f4abd3e3aa69',1,'ssm_trigger(ssm_sv_t *var, ssm_priority_t priority):&#160;ssm-scheduler.c']]],
+  ['ssm_5funschedule',['ssm_unschedule',['../group__all.html#ga507f4f10f494c4bf1d9254e32a976c09',1,'ssm_unschedule(struct ssm_sv *var):&#160;ssm-scheduler.c'],['../group__all.html#ga507f4f10f494c4bf1d9254e32a976c09',1,'ssm_unschedule(ssm_sv_t *var):&#160;ssm-scheduler.c']]],
   ['ssm_5fupdate_5fevent',['ssm_update_event',['../ssm-event_8c.html#a9cb328a999280c790dbc0ee742bc7c5d',1,'ssm-event.c']]]
 ];

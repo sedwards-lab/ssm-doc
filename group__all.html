@@ -241,6 +241,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaca5a06c32265bc6cf8df67b0a3a06801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gaca5a06c32265bc6cf8df67b0a3a06801">ssm_schedule</a> (<a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *var, <a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a> later)</td></tr>
 <tr class="memdesc:gaca5a06c32265bc6cf8df67b0a3a06801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule a future update to a variable.  <a href="#gaca5a06c32265bc6cf8df67b0a3a06801">More...</a><br /></td></tr>
 <tr class="separator:gaca5a06c32265bc6cf8df67b0a3a06801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga507f4f10f494c4bf1d9254e32a976c09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#ga507f4f10f494c4bf1d9254e32a976c09">ssm_unschedule</a> (<a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *var)</td></tr>
+<tr class="memdesc:ga507f4f10f494c4bf1d9254e32a976c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unschedule any pending event on a variable.  <a href="#ga507f4f10f494c4bf1d9254e32a976c09">More...</a><br /></td></tr>
+<tr class="separator:ga507f4f10f494c4bf1d9254e32a976c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabe1e877f8f28d0dc2015f4abd3e3aa69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gabe1e877f8f28d0dc2015f4abd3e3aa69">ssm_trigger</a> (<a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *var, <a class="el" href="group__all.html#gaf0599e969847088348147d8fb9a7bd82">ssm_priority_t</a> priority)</td></tr>
 <tr class="memdesc:gabe1e877f8f28d0dc2015f4abd3e3aa69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate routines triggered by a variable.  <a href="#gabe1e877f8f28d0dc2015f4abd3e3aa69">More...</a><br /></td></tr>
 <tr class="separator:gabe1e877f8f28d0dc2015f4abd3e3aa69"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -351,7 +354,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">((type *)((<span class="keywordtype">char</span> *)(<a class="code" href="group__all.html#ga744fbbb6363115680263e5a9e6734eed">member_type</a>(type, member) *){ptr} -                       \</div><div class="line">            offsetof(type, member)))</div><div class="ttc" id="group__all_html_ga744fbbb6363115680263e5a9e6734eed"><div class="ttname"><a href="group__all.html#ga744fbbb6363115680263e5a9e6734eed">member_type</a></div><div class="ttdeci">#define member_type(type, member)</div><div class="ttdoc">Implementation of container_of that falls back to ISO C99 when GNU C is not available (from https://s...</div><div class="ttdef"><b>Definition:</b> ssm.h:380</div></div>
+<b>Value:</b><div class="fragment"><div class="line">((type *)((<span class="keywordtype">char</span> *)(<a class="code" href="group__all.html#ga744fbbb6363115680263e5a9e6734eed">member_type</a>(type, member) *){ptr} -                       \</div><div class="line">            offsetof(type, member)))</div><div class="ttc" id="group__all_html_ga744fbbb6363115680263e5a9e6734eed"><div class="ttname"><a href="group__all.html#ga744fbbb6363115680263e5a9e6734eed">member_type</a></div><div class="ttdeci">#define member_type(type, member)</div><div class="ttdoc">Implementation of container_of that falls back to ISO C99 when GNU C is not available (from https://s...</div><div class="ttdef"><b>Definition:</b> ssm.h:386</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -496,7 +499,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> ssm_update_##payload_t(<a class="code" href="structssm__sv.html">ssm_sv_t</a> *sv) {                      \</div><div class="line">    ssm_##payload_t##_t *v = <a class="code" href="group__all.html#gaf8c317a42292b61c93aae91e59118a46">container_of</a>(sv, ssm_##payload_t##_t, sv);        \</div><div class="line">    v-&gt;value = v-&gt;later_value;                                                 \</div><div class="line">  }                                                                            \</div><div class="line">  void ssm_assign_##payload_t(ssm_##payload_t##_t *v, <a class="code" href="group__all.html#gaf0599e969847088348147d8fb9a7bd82">ssm_priority_t</a> prio,     \</div><div class="line">                              <span class="keyword">const</span> payload_t value) {                         \</div><div class="line">    v-&gt;value = value;                                          \</div><div class="line">    v-&gt;sv.last_updated = <a class="code" href="group__all.html#gad74c026bbc98ac6d6404adf6e3a625ff">ssm_now</a>();                        \</div><div class="line">    ssm_trigger(&amp;v-&gt;sv, prio);                                                 \</div><div class="line">  }                                                                            \</div><div class="line">  void ssm_later_##payload_t(ssm_##payload_t##_t *v, <a class="code" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a> then,          \</div><div class="line">                         <span class="keyword">const</span> payload_t value) {                              \</div><div class="line">    v-&gt;later_value = value;                                                    \</div><div class="line">    ssm_schedule(&amp;v-&gt;sv, then);                                \</div><div class="line">  }                                        \</div><div class="line">  void ssm_initialize_##payload_t(ssm_##payload_t##_t *v) {                    \</div><div class="line">    ssm_initialize(&amp;v-&gt;sv, ssm_update_##payload_t);                        \</div><div class="line">  }</div><div class="ttc" id="group__all_html_gae963c119a7847a3327202eacb31f66ca"><div class="ttname"><a href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a></div><div class="ttdeci">uint64_t ssm_time_t</div><div class="ttdoc">Absolute time; never to overflow. </div><div class="ttdef"><b>Definition:</b> ssm.h:100</div></div>
 <div class="ttc" id="structssm__sv_html"><div class="ttname"><a href="structssm__sv.html">ssm_sv</a></div><div class="ttdoc">A variable that may have scheduled updates and triggers. </div><div class="ttdef"><b>Definition:</b> ssm.h:204</div></div>
-<div class="ttc" id="group__all_html_gaf8c317a42292b61c93aae91e59118a46"><div class="ttname"><a href="group__all.html#gaf8c317a42292b61c93aae91e59118a46">container_of</a></div><div class="ttdeci">#define container_of(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> ssm.h:382</div></div>
+<div class="ttc" id="group__all_html_gaf8c317a42292b61c93aae91e59118a46"><div class="ttname"><a href="group__all.html#gaf8c317a42292b61c93aae91e59118a46">container_of</a></div><div class="ttdeci">#define container_of(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> ssm.h:388</div></div>
 <div class="ttc" id="group__all_html_gad74c026bbc98ac6d6404adf6e3a625ff"><div class="ttname"><a href="group__all.html#gad74c026bbc98ac6d6404adf6e3a625ff">ssm_now</a></div><div class="ttdeci">ssm_time_t ssm_now(void)</div><div class="ttdoc">Return the current model time. </div><div class="ttdef"><b>Definition:</b> ssm-scheduler.c:119</div></div>
 <div class="ttc" id="group__all_html_gaf0599e969847088348147d8fb9a7bd82"><div class="ttname"><a href="group__all.html#gaf0599e969847088348147d8fb9a7bd82">ssm_priority_t</a></div><div class="ttdeci">uint32_t ssm_priority_t</div><div class="ttdoc">Thread priority. </div><div class="ttdef"><b>Definition:</b> ssm.h:112</div></div>
 </div><!-- fragment -->
@@ -2186,6 +2189,27 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga507f4f10f494c4bf1d9254e32a976c09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga507f4f10f494c4bf1d9254e32a976c09">&#9670;&nbsp;</a></span>ssm_unschedule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ssm_unschedule </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *&#160;</td>
+          <td class="paramname"><em>var</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unschedule any pending event on a variable. </p>
+<p>If there is a pending event on the given variable, remove the event from the queue. Nothing happens if there is no such pending event </p>
 
 </div>
 </div>
