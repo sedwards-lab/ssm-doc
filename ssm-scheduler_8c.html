@@ -85,6 +85,11 @@ Include dependency graph for ssm-scheduler.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a3fc88d105940c7a361804adfd99445d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a>&#160;&#160;&#160;static</td></tr>
+<tr class="memdesc:a3fc88d105940c7a361804adfd99445d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">If defined, makes normally hidden internal functions and variables available for linking, allowing whitebox testing.  <a href="#a3fc88d105940c7a361804adfd99445d5">More...</a><br /></td></tr>
+<tr class="separator:a3fc88d105940c7a361804adfd99445d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e3be49c5b417c4b7e79ce0faae5f18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#aa2e3be49c5b417c4b7e79ce0faae5f18">SSM_STATIC_INLINE</a>&#160;&#160;&#160;static inline</td></tr>
+<tr class="separator:aa2e3be49c5b417c4b7e79ce0faae5f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a212bc77e666ea29840c6201cc5d606d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a212bc77e666ea29840c6201cc5d606d6">SSM_EVENT_QUEUE_SIZE</a>&#160;&#160;&#160;2048</td></tr>
 <tr class="memdesc:a212bc77e666ea29840c6201cc5d606d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the event queue; override as necessary.  <a href="#a212bc77e666ea29840c6201cc5d606d6">More...</a><br /></td></tr>
 <tr class="separator:a212bc77e666ea29840c6201cc5d606d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -98,24 +103,33 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:af9e6713f8ed5be19aea426093e1d924f"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a></td></tr>
-<tr class="memdesc:af9e6713f8ed5be19aea426093e1d924f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue index type; these are 1-indexed.  <a href="#af9e6713f8ed5be19aea426093e1d924f">More...</a><br /></td></tr>
+<tr class="memdesc:af9e6713f8ed5be19aea426093e1d924f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue index type; index of 1 is the first element.  <a href="#af9e6713f8ed5be19aea426093e1d924f">More...</a><br /></td></tr>
 <tr class="separator:af9e6713f8ed5be19aea426093e1d924f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gae1eb936699cbf7d8448de08a2020b8cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gae1eb936699cbf7d8448de08a2020b8cc">ssm_event_on</a> (struct <a class="el" href="structssm__sv.html">ssm_sv</a> *var)</td></tr>
+<tr class="memitem:ga5fcbb48059738fc6cf4878085dd7036a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#ga5fcbb48059738fc6cf4878085dd7036a">ssm_reset</a> ()</td></tr>
+<tr class="memdesc:ga5fcbb48059738fc6cf4878085dd7036a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the scheduler.  <a href="group__all.html#ga5fcbb48059738fc6cf4878085dd7036a">More...</a><br /></td></tr>
+<tr class="separator:ga5fcbb48059738fc6cf4878085dd7036a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1eb936699cbf7d8448de08a2020b8cc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gae1eb936699cbf7d8448de08a2020b8cc">ssm_event_on</a> (<a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *var)</td></tr>
 <tr class="memdesc:gae1eb936699cbf7d8448de08a2020b8cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if there is an event on the given variable in the current instant.  <a href="group__all.html#gae1eb936699cbf7d8448de08a2020b8cc">More...</a><br /></td></tr>
 <tr class="separator:gae1eb936699cbf7d8448de08a2020b8cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2ab8d946e7023a827985fc75ce7ceb64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#ga2ab8d946e7023a827985fc75ce7ceb64">ssm_sensitize</a> (struct <a class="el" href="structssm__sv.html">ssm_sv</a> *var, struct <a class="el" href="structssm__trigger.html">ssm_trigger</a> *trigger)</td></tr>
+<tr class="memitem:ga2ab8d946e7023a827985fc75ce7ceb64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#ga2ab8d946e7023a827985fc75ce7ceb64">ssm_sensitize</a> (<a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *var, <a class="el" href="group__all.html#ga4b8d723d349f000899a3e00d47e0d0c2">ssm_trigger_t</a> *trigger)</td></tr>
 <tr class="memdesc:ga2ab8d946e7023a827985fc75ce7ceb64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate writing to a variable should trigger a routine.  <a href="group__all.html#ga2ab8d946e7023a827985fc75ce7ceb64">More...</a><br /></td></tr>
 <tr class="separator:ga2ab8d946e7023a827985fc75ce7ceb64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga919320e80a8d110f7c42a104b8075f89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#ga919320e80a8d110f7c42a104b8075f89">ssm_desensitize</a> (struct <a class="el" href="structssm__trigger.html">ssm_trigger</a> *trigger)</td></tr>
+<tr class="memitem:ga919320e80a8d110f7c42a104b8075f89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#ga919320e80a8d110f7c42a104b8075f89">ssm_desensitize</a> (<a class="el" href="group__all.html#ga4b8d723d349f000899a3e00d47e0d0c2">ssm_trigger_t</a> *trigger)</td></tr>
 <tr class="memdesc:ga919320e80a8d110f7c42a104b8075f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable a sensitized routine.  <a href="group__all.html#ga919320e80a8d110f7c42a104b8075f89">More...</a><br /></td></tr>
 <tr class="separator:ga919320e80a8d110f7c42a104b8075f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabe1e877f8f28d0dc2015f4abd3e3aa69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gabe1e877f8f28d0dc2015f4abd3e3aa69">ssm_trigger</a> (struct <a class="el" href="structssm__sv.html">ssm_sv</a> *var, <a class="el" href="group__all.html#gaf0599e969847088348147d8fb9a7bd82">ssm_priority_t</a> priority)</td></tr>
+<tr class="memitem:gabe1e877f8f28d0dc2015f4abd3e3aa69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gabe1e877f8f28d0dc2015f4abd3e3aa69">ssm_trigger</a> (<a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *var, <a class="el" href="group__all.html#gaf0599e969847088348147d8fb9a7bd82">ssm_priority_t</a> priority)</td></tr>
 <tr class="memdesc:gabe1e877f8f28d0dc2015f4abd3e3aa69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activate routines triggered by a variable.  <a href="group__all.html#gabe1e877f8f28d0dc2015f4abd3e3aa69">More...</a><br /></td></tr>
 <tr class="separator:gabe1e877f8f28d0dc2015f4abd3e3aa69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac8ce0b0a4398e8412d22d6c2447404c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gac8ce0b0a4398e8412d22d6c2447404c7">ssm_activate</a> (struct <a class="el" href="structssm__act.html">ssm_act</a> *act)</td></tr>
+<tr class="memitem:a1dbcfdc79ff6f03a8f44b2c12f6f7a84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#aa2e3be49c5b417c4b7e79ce0faae5f18">SSM_STATIC_INLINE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a1dbcfdc79ff6f03a8f44b2c12f6f7a84">act_queue_percolate_up</a> (<a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a> hole, <a class="el" href="group__all.html#ga5e1c601834c7aedca3154c05aec49700">ssm_act_t</a> *act)</td></tr>
+<tr class="memdesc:a1dbcfdc79ff6f03a8f44b2c12f6f7a84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting at the hole, walk up toward the root of the tree, copying parent to child until we find where we can put the new activation record.  <a href="#a1dbcfdc79ff6f03a8f44b2c12f6f7a84">More...</a><br /></td></tr>
+<tr class="separator:a1dbcfdc79ff6f03a8f44b2c12f6f7a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5df4a0b2dc7a50eaaa7da0fc21fa47c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#aa2e3be49c5b417c4b7e79ce0faae5f18">SSM_STATIC_INLINE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a5df4a0b2dc7a50eaaa7da0fc21fa47c8">act_queue_percolate_down</a> (<a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a> hole, <a class="el" href="group__all.html#ga5e1c601834c7aedca3154c05aec49700">ssm_act_t</a> *act)</td></tr>
+<tr class="memdesc:a5df4a0b2dc7a50eaaa7da0fc21fa47c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting at the hole, walk down towards the leaves of the tree, moving the earlier child to the parent and repeating the process on that child.  <a href="#a5df4a0b2dc7a50eaaa7da0fc21fa47c8">More...</a><br /></td></tr>
+<tr class="separator:a5df4a0b2dc7a50eaaa7da0fc21fa47c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac8ce0b0a4398e8412d22d6c2447404c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gac8ce0b0a4398e8412d22d6c2447404c7">ssm_activate</a> (<a class="el" href="group__all.html#ga5e1c601834c7aedca3154c05aec49700">ssm_act_t</a> *act)</td></tr>
 <tr class="memdesc:gac8ce0b0a4398e8412d22d6c2447404c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule a routine to run in the current instant.  <a href="group__all.html#gac8ce0b0a4398e8412d22d6c2447404c7">More...</a><br /></td></tr>
 <tr class="separator:gac8ce0b0a4398e8412d22d6c2447404c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae3e5f51dac6ee65b5be5034045b01a79"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gae3e5f51dac6ee65b5be5034045b01a79">ssm_next_event_time</a> ()</td></tr>
@@ -124,15 +138,22 @@ Functions</h2></td></tr>
 <tr class="memitem:gad74c026bbc98ac6d6404adf6e3a625ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gad74c026bbc98ac6d6404adf6e3a625ff">ssm_now</a> ()</td></tr>
 <tr class="memdesc:gad74c026bbc98ac6d6404adf6e3a625ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current model time.  <a href="group__all.html#gad74c026bbc98ac6d6404adf6e3a625ff">More...</a><br /></td></tr>
 <tr class="separator:gad74c026bbc98ac6d6404adf6e3a625ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5825ea18424b1af4272e073ee0ef4673"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a5825ea18424b1af4272e073ee0ef4673">find_queued_event</a> (struct <a class="el" href="structssm__sv.html">ssm_sv</a> *var)</td></tr>
-<tr class="memdesc:a5825ea18424b1af4272e073ee0ef4673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the index of an already scheduled event.  <a href="#a5825ea18424b1af4272e073ee0ef4673">More...</a><br /></td></tr>
-<tr class="separator:a5825ea18424b1af4272e073ee0ef4673"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8469ca47be4a127ba4973a6ce0f9880"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#ac8469ca47be4a127ba4973a6ce0f9880">ssm_initialize</a> (struct <a class="el" href="structssm__sv.html">ssm_sv</a> *var, void(*update)(struct <a class="el" href="structssm__sv.html">ssm_sv</a> *))</td></tr>
-<tr class="separator:ac8469ca47be4a127ba4973a6ce0f9880"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaca5a06c32265bc6cf8df67b0a3a06801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gaca5a06c32265bc6cf8df67b0a3a06801">ssm_schedule</a> (struct <a class="el" href="structssm__sv.html">ssm_sv</a> *var, <a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a> later)</td></tr>
+<tr class="memitem:a360e351475aba3ecf51930c9adc6a36f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#aa2e3be49c5b417c4b7e79ce0faae5f18">SSM_STATIC_INLINE</a> <a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a360e351475aba3ecf51930c9adc6a36f">find_queued_event</a> (<a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *var)</td></tr>
+<tr class="memdesc:a360e351475aba3ecf51930c9adc6a36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine the index of an already scheduled event.  <a href="#a360e351475aba3ecf51930c9adc6a36f">More...</a><br /></td></tr>
+<tr class="separator:a360e351475aba3ecf51930c9adc6a36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga20a36c5ec6a9b77c3ea086b3f91f65ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#ga20a36c5ec6a9b77c3ea086b3f91f65ff">ssm_initialize</a> (<a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *var, void(*update)(<a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *))</td></tr>
+<tr class="memdesc:ga20a36c5ec6a9b77c3ea086b3f91f65ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a scheduled variable.  <a href="group__all.html#ga20a36c5ec6a9b77c3ea086b3f91f65ff">More...</a><br /></td></tr>
+<tr class="separator:ga20a36c5ec6a9b77c3ea086b3f91f65ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7664a6ae43e69f1ac6f2f7e320e0b563"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#aa2e3be49c5b417c4b7e79ce0faae5f18">SSM_STATIC_INLINE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a7664a6ae43e69f1ac6f2f7e320e0b563">event_queue_percolate_up</a> (<a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a> hole, <a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *var)</td></tr>
+<tr class="memdesc:a7664a6ae43e69f1ac6f2f7e320e0b563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting at the hole, walk up toward the root of the tree, copying parent to child until we find where we can put the new event.  <a href="#a7664a6ae43e69f1ac6f2f7e320e0b563">More...</a><br /></td></tr>
+<tr class="separator:a7664a6ae43e69f1ac6f2f7e320e0b563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab133aca43495cacd91d1070f1b13efac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#aa2e3be49c5b417c4b7e79ce0faae5f18">SSM_STATIC_INLINE</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#ab133aca43495cacd91d1070f1b13efac">event_queue_percolate_down</a> (<a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a> hole, <a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *event)</td></tr>
+<tr class="memdesc:ab133aca43495cacd91d1070f1b13efac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starting at the hole, walk down towards the leaves of the tree, moving the earlier child to the parent and repeating the process on that child.  <a href="#ab133aca43495cacd91d1070f1b13efac">More...</a><br /></td></tr>
+<tr class="separator:ab133aca43495cacd91d1070f1b13efac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca5a06c32265bc6cf8df67b0a3a06801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#gaca5a06c32265bc6cf8df67b0a3a06801">ssm_schedule</a> (<a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *var, <a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a> later)</td></tr>
 <tr class="memdesc:gaca5a06c32265bc6cf8df67b0a3a06801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedule a future update to a variable.  <a href="group__all.html#gaca5a06c32265bc6cf8df67b0a3a06801">More...</a><br /></td></tr>
 <tr class="separator:gaca5a06c32265bc6cf8df67b0a3a06801"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga507f4f10f494c4bf1d9254e32a976c09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#ga507f4f10f494c4bf1d9254e32a976c09">ssm_unschedule</a> (struct <a class="el" href="structssm__sv.html">ssm_sv</a> *var)</td></tr>
+<tr class="memitem:ga507f4f10f494c4bf1d9254e32a976c09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#ga507f4f10f494c4bf1d9254e32a976c09">ssm_unschedule</a> (<a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *var)</td></tr>
 <tr class="memdesc:ga507f4f10f494c4bf1d9254e32a976c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unschedule any pending event on a variable.  <a href="group__all.html#ga507f4f10f494c4bf1d9254e32a976c09">More...</a><br /></td></tr>
 <tr class="separator:ga507f4f10f494c4bf1d9254e32a976c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga403b1a8afd439aae4c7290ac791c6745"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__all.html#ga403b1a8afd439aae4c7290ac791c6745">ssm_tick</a> ()</td></tr>
@@ -141,19 +162,19 @@ Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a4538246a1ca86cdbea7e7ed184b5a2d3"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structssm__sv.html">ssm_sv</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a4538246a1ca86cdbea7e7ed184b5a2d3">event_queue</a> [<a class="el" href="ssm-scheduler_8c.html#a212bc77e666ea29840c6201cc5d606d6">SSM_EVENT_QUEUE_SIZE</a>+<a class="el" href="ssm-scheduler_8c.html#aebf47b5a148097c1cb9d146071828637">SSM_QUEUE_HEAD</a>]</td></tr>
-<tr class="memdesc:a4538246a1ca86cdbea7e7ed184b5a2d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event queue, used to track and schedule events between instants.  <a href="#a4538246a1ca86cdbea7e7ed184b5a2d3">More...</a><br /></td></tr>
-<tr class="separator:a4538246a1ca86cdbea7e7ed184b5a2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8db084282eebee9013c99e4fe8c5a2f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#ad8db084282eebee9013c99e4fe8c5a2f">event_queue_len</a> = 0</td></tr>
-<tr class="separator:ad8db084282eebee9013c99e4fe8c5a2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85d57a8500835b6483b87aa003d4fe03"><td class="memItemLeft" align="right" valign="top">static struct <a class="el" href="structssm__act.html">ssm_act</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a85d57a8500835b6483b87aa003d4fe03">act_queue</a> [<a class="el" href="ssm-scheduler_8c.html#a25ce0218229260d51bbeb62864dc90d0">SSM_ACT_QUEUE_SIZE</a>+<a class="el" href="ssm-scheduler_8c.html#aebf47b5a148097c1cb9d146071828637">SSM_QUEUE_HEAD</a>]</td></tr>
-<tr class="memdesc:a85d57a8500835b6483b87aa003d4fe03"><td class="mdescLeft">&#160;</td><td class="mdescRight">ctivation record queue, used to track and schedule continuations at each instant.  <a href="#a85d57a8500835b6483b87aa003d4fe03">More...</a><br /></td></tr>
-<tr class="separator:a85d57a8500835b6483b87aa003d4fe03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d38e14b4dd38b2940af345b951de879"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a9d38e14b4dd38b2940af345b951de879">act_queue_len</a> = 0</td></tr>
-<tr class="separator:a9d38e14b4dd38b2940af345b951de879"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af981ea26ee438c8abea350cba007fffb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#af981ea26ee438c8abea350cba007fffb">now</a> = 0L</td></tr>
-<tr class="memdesc:af981ea26ee438c8abea350cba007fffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Note that this starts out uninitialized.  <a href="#af981ea26ee438c8abea350cba007fffb">More...</a><br /></td></tr>
-<tr class="separator:af981ea26ee438c8abea350cba007fffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae517897aca56cd08720db2d23aa50043"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#ae517897aca56cd08720db2d23aa50043">event_queue</a> [<a class="el" href="ssm-scheduler_8c.html#a212bc77e666ea29840c6201cc5d606d6">SSM_EVENT_QUEUE_SIZE</a>+<a class="el" href="ssm-scheduler_8c.html#aebf47b5a148097c1cb9d146071828637">SSM_QUEUE_HEAD</a>]</td></tr>
+<tr class="memdesc:ae517897aca56cd08720db2d23aa50043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event queue, used to track and schedule events between instants.  <a href="#ae517897aca56cd08720db2d23aa50043">More...</a><br /></td></tr>
+<tr class="separator:ae517897aca56cd08720db2d23aa50043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b067486a0ad26ce2c76bd6964f858fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a9b067486a0ad26ce2c76bd6964f858fc">event_queue_len</a> = 0</td></tr>
+<tr class="separator:a9b067486a0ad26ce2c76bd6964f858fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50a79f16bc1a091bc13d9597278daae7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="group__all.html#ga5e1c601834c7aedca3154c05aec49700">ssm_act_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a50a79f16bc1a091bc13d9597278daae7">act_queue</a> [<a class="el" href="ssm-scheduler_8c.html#a25ce0218229260d51bbeb62864dc90d0">SSM_ACT_QUEUE_SIZE</a>+<a class="el" href="ssm-scheduler_8c.html#aebf47b5a148097c1cb9d146071828637">SSM_QUEUE_HEAD</a>]</td></tr>
+<tr class="memdesc:a50a79f16bc1a091bc13d9597278daae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">ctivation record queue, used to track and schedule continuations at each instant.  <a href="#a50a79f16bc1a091bc13d9597278daae7">More...</a><br /></td></tr>
+<tr class="separator:a50a79f16bc1a091bc13d9597278daae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf5d178a07888ef6947d379cca4e8e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a3bf5d178a07888ef6947d379cca4e8e0">act_queue_len</a> = 0</td></tr>
+<tr class="separator:a3bf5d178a07888ef6947d379cca4e8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b2e93b2d3f5db60cd2893861ae7e21b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a2b2e93b2d3f5db60cd2893861ae7e21b">now</a> = 0L</td></tr>
+<tr class="memdesc:a2b2e93b2d3f5db60cd2893861ae7e21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Note that this starts out uninitialized.  <a href="#a2b2e93b2d3f5db60cd2893861ae7e21b">More...</a><br /></td></tr>
+<tr class="separator:a2b2e93b2d3f5db60cd2893861ae7e21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a25ce0218229260d51bbeb62864dc90d0"></a>
@@ -204,6 +225,36 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a3fc88d105940c7a361804adfd99445d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc88d105940c7a361804adfd99445d5">&#9670;&nbsp;</a></span>SSM_STATIC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSM_STATIC&#160;&#160;&#160;static</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If defined, makes normally hidden internal functions and variables available for linking, allowing whitebox testing. </p>
+
+</div>
+</div>
+<a id="aa2e3be49c5b417c4b7e79ce0faae5f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e3be49c5b417c4b7e79ce0faae5f18">&#9670;&nbsp;</a></span>SSM_STATIC_INLINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SSM_STATIC_INLINE&#160;&#160;&#160;static inline</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="af9e6713f8ed5be19aea426093e1d924f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9e6713f8ed5be19aea426093e1d924f">&#9670;&nbsp;</a></span>q_idx_t</h2>
@@ -217,33 +268,175 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Queue index type; these are 1-indexed. </p>
+<p>Queue index type; index of 1 is the first element. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a5825ea18424b1af4272e073ee0ef4673"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5825ea18424b1af4272e073ee0ef4673">&#9670;&nbsp;</a></span>find_queued_event()</h2>
+<a id="a5df4a0b2dc7a50eaaa7da0fc21fa47c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5df4a0b2dc7a50eaaa7da0fc21fa47c8">&#9670;&nbsp;</a></span>act_queue_percolate_down()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a> find_queued_event </td>
+          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#aa2e3be49c5b417c4b7e79ce0faae5f18">SSM_STATIC_INLINE</a> void act_queue_percolate_down </td>
           <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structssm__sv.html">ssm_sv</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a>&#160;</td>
+          <td class="paramname"><em>hole</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__all.html#ga5e1c601834c7aedca3154c05aec49700">ssm_act_t</a> *&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starting at the hole, walk down towards the leaves of the tree, moving the earlier child to the parent and repeating the process on that child. </p>
+<p>This makes the parent earlier than both children. Stop when the activation record we're trying to place has a lower priority than either children.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hole</td><td>Where to place the given activation record </td></tr>
+    <tr><td class="paramname">act</td><td>Activation record to be placed in the queue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1dbcfdc79ff6f03a8f44b2c12f6f7a84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dbcfdc79ff6f03a8f44b2c12f6f7a84">&#9670;&nbsp;</a></span>act_queue_percolate_up()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#aa2e3be49c5b417c4b7e79ce0faae5f18">SSM_STATIC_INLINE</a> void act_queue_percolate_up </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a>&#160;</td>
+          <td class="paramname"><em>hole</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__all.html#ga5e1c601834c7aedca3154c05aec49700">ssm_act_t</a> *&#160;</td>
+          <td class="paramname"><em>act</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starting at the hole, walk up toward the root of the tree, copying parent to child until we find where we can put the new activation record. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hole</td><td>Index of the hole that needs to be filled </td></tr>
+    <tr><td class="paramname">act</td><td>Activation record that needs to be placed in the heap </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab133aca43495cacd91d1070f1b13efac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab133aca43495cacd91d1070f1b13efac">&#9670;&nbsp;</a></span>event_queue_percolate_down()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#aa2e3be49c5b417c4b7e79ce0faae5f18">SSM_STATIC_INLINE</a> void event_queue_percolate_down </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a>&#160;</td>
+          <td class="paramname"><em>hole</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starting at the hole, walk down towards the leaves of the tree, moving the earlier child to the parent and repeating the process on that child. </p>
+<p>This makes the parent earlier than both children. Stop when the event we're trying to place is earlier than both of the children.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hole</td><td>Where to place the given event </td></tr>
+    <tr><td class="paramname">event</td><td>Event to place in the queue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7664a6ae43e69f1ac6f2f7e320e0b563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7664a6ae43e69f1ac6f2f7e320e0b563">&#9670;&nbsp;</a></span>event_queue_percolate_up()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#aa2e3be49c5b417c4b7e79ce0faae5f18">SSM_STATIC_INLINE</a> void event_queue_percolate_up </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a>&#160;</td>
+          <td class="paramname"><em>hole</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *&#160;</td>
+          <td class="paramname"><em>var</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starting at the hole, walk up toward the root of the tree, copying parent to child until we find where we can put the new event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hole</td><td>Index of the hole, from 1 to event_queue_len, inclusive </td></tr>
+    <tr><td class="paramname">var</td><td>Event to place in the queue. Its later_time field should be set to its proper value. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a360e351475aba3ecf51930c9adc6a36f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360e351475aba3ecf51930c9adc6a36f">&#9670;&nbsp;</a></span>find_queued_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#aa2e3be49c5b417c4b7e79ce0faae5f18">SSM_STATIC_INLINE</a> <a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a> find_queued_event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a> *&#160;</td>
           <td class="paramname"><em>var</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Determine the index of an already scheduled event. </p>
@@ -257,53 +450,17 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac8469ca47be4a127ba4973a6ce0f9880"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8469ca47be4a127ba4973a6ce0f9880">&#9670;&nbsp;</a></span>ssm_initialize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ssm_initialize </td>
-          <td>(</td>
-          <td class="paramtype">struct <a class="el" href="structssm__sv.html">ssm_sv</a> *&#160;</td>
-          <td class="paramname"><em>var</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)(struct <a class="el" href="structssm__sv.html">ssm_sv</a> *)&#160;</td>
-          <td class="paramname"><em>update</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a85d57a8500835b6483b87aa003d4fe03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85d57a8500835b6483b87aa003d4fe03">&#9670;&nbsp;</a></span>act_queue</h2>
+<a id="a50a79f16bc1a091bc13d9597278daae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50a79f16bc1a091bc13d9597278daae7">&#9670;&nbsp;</a></span>act_queue</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structssm__act.html">ssm_act</a>* act_queue[<a class="el" href="ssm-scheduler_8c.html#a25ce0218229260d51bbeb62864dc90d0">SSM_ACT_QUEUE_SIZE</a>+<a class="el" href="ssm-scheduler_8c.html#aebf47b5a148097c1cb9d146071828637">SSM_QUEUE_HEAD</a>]</td>
+          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="group__all.html#ga5e1c601834c7aedca3154c05aec49700">ssm_act_t</a>* act_queue[<a class="el" href="ssm-scheduler_8c.html#a25ce0218229260d51bbeb62864dc90d0">SSM_ACT_QUEUE_SIZE</a>+<a class="el" href="ssm-scheduler_8c.html#aebf47b5a148097c1cb9d146071828637">SSM_QUEUE_HEAD</a>]</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>ctivation record queue, used to track and schedule continuations at each instant. </p>
@@ -311,94 +468,62 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9d38e14b4dd38b2940af345b951de879"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d38e14b4dd38b2940af345b951de879">&#9670;&nbsp;</a></span>act_queue_len</h2>
+<a id="a3bf5d178a07888ef6947d379cca4e8e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf5d178a07888ef6947d379cca4e8e0">&#9670;&nbsp;</a></span>act_queue_len</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a> act_queue_len = 0</td>
+          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a> act_queue_len = 0</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4538246a1ca86cdbea7e7ed184b5a2d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4538246a1ca86cdbea7e7ed184b5a2d3">&#9670;&nbsp;</a></span>event_queue</h2>
+<a id="ae517897aca56cd08720db2d23aa50043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae517897aca56cd08720db2d23aa50043">&#9670;&nbsp;</a></span>event_queue</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structssm__sv.html">ssm_sv</a>* event_queue[<a class="el" href="ssm-scheduler_8c.html#a212bc77e666ea29840c6201cc5d606d6">SSM_EVENT_QUEUE_SIZE</a>+<a class="el" href="ssm-scheduler_8c.html#aebf47b5a148097c1cb9d146071828637">SSM_QUEUE_HEAD</a>]</td>
+          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="group__all.html#ga68d8cbd4597cf4b311f8dbbdb61eb625">ssm_sv_t</a>* event_queue[<a class="el" href="ssm-scheduler_8c.html#a212bc77e666ea29840c6201cc5d606d6">SSM_EVENT_QUEUE_SIZE</a>+<a class="el" href="ssm-scheduler_8c.html#aebf47b5a148097c1cb9d146071828637">SSM_QUEUE_HEAD</a>]</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Event queue, used to track and schedule events between instants. </p>
-<p>Managed as a binary heap sorted by e-&gt;later_time</p>
+<p>Managed as a binary heap sorted by later_time</p>
 <p>Since the first element (QUEUE_HEAD) is unusued, event_queue[event_queue_len] is the last element in the queue provided event_queue_len is non-zero </p>
 
 </div>
 </div>
-<a id="ad8db084282eebee9013c99e4fe8c5a2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8db084282eebee9013c99e4fe8c5a2f">&#9670;&nbsp;</a></span>event_queue_len</h2>
+<a id="a9b067486a0ad26ce2c76bd6964f858fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b067486a0ad26ce2c76bd6964f858fc">&#9670;&nbsp;</a></span>event_queue_len</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a> event_queue_len = 0</td>
+          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a> event_queue_len = 0</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="af981ea26ee438c8abea350cba007fffb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af981ea26ee438c8abea350cba007fffb">&#9670;&nbsp;</a></span>now</h2>
+<a id="a2b2e93b2d3f5db60cd2893861ae7e21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2e93b2d3f5db60cd2893861ae7e21b">&#9670;&nbsp;</a></span>now</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a> now = 0L</td>
+          <td class="memname"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a> now = 0L</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Note that this starts out uninitialized. </p>

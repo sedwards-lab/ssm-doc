@@ -62,7 +62,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">ssm_sv Struct Reference<div class="ingroups"><a class="el" href="group__all.html">All</a></div></div>  </div>
+<div class="title">ssm_sv Struct Reference<div class="ingroups"><a class="el" href="group__all.html">The SSM Runtime</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -98,10 +98,10 @@ Data Fields</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A variable that may have scheduled updates and triggers. </p>
 <p>This is the "base class" for other scheduled variable types.</p>
-<p>On its own, this represents a pure event variable, i.e., a scheduled variable with no data/payload.</p>
+<p>On its own, this represents a pure event variable, i.e., a scheduled variable with no data/payload. The presence of an event on such a variable can be tested with <a class="el" href="group__all.html#gae1eb936699cbf7d8448de08a2020b8cc" title="Return true if there is an event on the given variable in the current instant. ">ssm_event_on()</a> as well as awaited with triggers.</p>
 <p>The update field must point to code that copies the new value of the scheduled variable into its current value. For pure events, this function may do nothing, but the pointer must be non-zero.</p>
 <p>This can also be embedded in a wrapper struct/class to implement a scheduled variable with a payload. In this case, the payload should also be embedded in that wrapper class, and the vtable should have update/assign/later methods specialized to be aware of the size and layout of the wrapper class.</p>
-<p>An invariant: <a class="el" href="structssm__sv.html#a2527ff359c176c26db2570b0216ba9da" title="When the variable should be next updated. ">later_time</a> != <a class="el" href="group__all.html#ga21ad50b0c4e1feeaeb9c78af1a9d2d9f" title="Time indicating something will never happen. ">SSM_NEVER</a> if and only if this variable in the event queue. </p>
+<p>An invariant: <code>later_time</code> != <a class="el" href="group__all.html#ga21ad50b0c4e1feeaeb9c78af1a9d2d9f" title="Time indicating something will never happen. ">SSM_NEVER</a> if and only if this variable in the event queue. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
 <a id="a8789bb37d54b70b671b6286befaf711e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8789bb37d54b70b671b6286befaf711e">&#9670;&nbsp;</a></span>last_updated</h2>
