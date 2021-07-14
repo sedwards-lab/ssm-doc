@@ -173,7 +173,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a3bf5d178a07888ef6947d379cca4e8e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="ssm-scheduler_8c.html#af9e6713f8ed5be19aea426093e1d924f">q_idx_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a3bf5d178a07888ef6947d379cca4e8e0">act_queue_len</a> = 0</td></tr>
 <tr class="separator:a3bf5d178a07888ef6947d379cca4e8e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b2e93b2d3f5db60cd2893861ae7e21b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ssm-scheduler_8c.html#a3fc88d105940c7a361804adfd99445d5">SSM_STATIC</a> <a class="el" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ssm-scheduler_8c.html#a2b2e93b2d3f5db60cd2893861ae7e21b">now</a> = 0L</td></tr>
-<tr class="memdesc:a2b2e93b2d3f5db60cd2893861ae7e21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Note that this starts out uninitialized.  <a href="#a2b2e93b2d3f5db60cd2893861ae7e21b">More...</a><br /></td></tr>
+<tr class="memdesc:a2b2e93b2d3f5db60cd2893861ae7e21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current model time.  <a href="#a2b2e93b2d3f5db60cd2893861ae7e21b">More...</a><br /></td></tr>
 <tr class="separator:a2b2e93b2d3f5db60cd2893861ae7e21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -526,8 +526,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Note that this starts out uninitialized. </p>
-<p>It is the responsibility of the runtime to do so. </p>
+<p>The current model time. </p>
+<p>Read with <a class="el" href="group__all.html#gad74c026bbc98ac6d6404adf6e3a625ff" title="Return the current model time. ">ssm_now()</a>; user programs should not manipuate this directly.</p>
+<p>This starts out initialized to 0; can be reset by <a class="el" href="group__all.html#ga5fcbb48059738fc6cf4878085dd7036a" title="Reset the scheduler. ">ssm_reset()</a>. <a class="el" href="group__all.html#ga403b1a8afd439aae4c7290ac791c6745" title="Run the system for the next scheduled instant. ">ssm_tick()</a> advances it monotonically. </p>
 
 </div>
 </div>

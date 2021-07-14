@@ -357,7 +357,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">((type *)((<span class="keywordtype">char</span> *)(<a class="code" href="group__all.html#ga744fbbb6363115680263e5a9e6734eed">member_type</a>(type, member) *){ptr} -                       \</div><div class="line">            offsetof(type, member)))</div><div class="ttc" id="group__all_html_ga744fbbb6363115680263e5a9e6734eed"><div class="ttname"><a href="group__all.html#ga744fbbb6363115680263e5a9e6734eed">member_type</a></div><div class="ttdeci">#define member_type(type, member)</div><div class="ttdoc">Implementation of container_of that falls back to ISO C99 when GNU C is not available (from https://s...</div><div class="ttdef"><b>Definition:</b> ssm.h:397</div></div>
+<b>Value:</b><div class="fragment"><div class="line">((type *)((<span class="keywordtype">char</span> *)(<a class="code" href="group__all.html#ga744fbbb6363115680263e5a9e6734eed">member_type</a>(type, member) *){ptr} -                       \</div><div class="line">            offsetof(type, member)))</div><div class="ttc" id="group__all_html_ga744fbbb6363115680263e5a9e6734eed"><div class="ttname"><a href="group__all.html#ga744fbbb6363115680263e5a9e6734eed">member_type</a></div><div class="ttdeci">#define member_type(type, member)</div><div class="ttdoc">Implementation of container_of that falls back to ISO C99 when GNU C is not available (from https://s...</div><div class="ttdef"><b>Definition:</b> ssm.h:401</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -502,8 +502,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> ssm_update_##payload_t(<a class="code" href="structssm__sv.html">ssm_sv_t</a> *sv) {                      \</div><div class="line">    ssm_##payload_t##_t *v = <a class="code" href="group__all.html#gaf8c317a42292b61c93aae91e59118a46">container_of</a>(sv, ssm_##payload_t##_t, sv);        \</div><div class="line">    v-&gt;value = v-&gt;later_value;                                                 \</div><div class="line">  }                                                                            \</div><div class="line">  void ssm_assign_##payload_t(ssm_##payload_t##_t *v, <a class="code" href="group__all.html#gaf0599e969847088348147d8fb9a7bd82">ssm_priority_t</a> prio,     \</div><div class="line">                              <span class="keyword">const</span> payload_t value) {                         \</div><div class="line">    v-&gt;value = value;                                          \</div><div class="line">    v-&gt;sv.last_updated = <a class="code" href="group__all.html#gad74c026bbc98ac6d6404adf6e3a625ff">ssm_now</a>();                        \</div><div class="line">    ssm_trigger(&amp;v-&gt;sv, prio);                                                 \</div><div class="line">  }                                                                            \</div><div class="line">  void ssm_later_##payload_t(ssm_##payload_t##_t *v, <a class="code" href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a> then,          \</div><div class="line">                         <span class="keyword">const</span> payload_t value) {                              \</div><div class="line">    v-&gt;later_value = value;                                                    \</div><div class="line">    ssm_schedule(&amp;v-&gt;sv, then);                                \</div><div class="line">  }                                        \</div><div class="line">  void ssm_initialize_##payload_t(ssm_##payload_t##_t *v) {                    \</div><div class="line">    ssm_initialize(&amp;v-&gt;sv, ssm_update_##payload_t);                        \</div><div class="line">  }</div><div class="ttc" id="group__all_html_gae963c119a7847a3327202eacb31f66ca"><div class="ttname"><a href="group__all.html#gae963c119a7847a3327202eacb31f66ca">ssm_time_t</a></div><div class="ttdeci">uint64_t ssm_time_t</div><div class="ttdoc">Absolute time; never to overflow. </div><div class="ttdef"><b>Definition:</b> ssm.h:100</div></div>
 <div class="ttc" id="structssm__sv_html"><div class="ttname"><a href="structssm__sv.html">ssm_sv</a></div><div class="ttdoc">A variable that may have scheduled updates and triggers. </div><div class="ttdef"><b>Definition:</b> ssm.h:206</div></div>
-<div class="ttc" id="group__all_html_gaf8c317a42292b61c93aae91e59118a46"><div class="ttname"><a href="group__all.html#gaf8c317a42292b61c93aae91e59118a46">container_of</a></div><div class="ttdeci">#define container_of(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> ssm.h:399</div></div>
-<div class="ttc" id="group__all_html_gad74c026bbc98ac6d6404adf6e3a625ff"><div class="ttname"><a href="group__all.html#gad74c026bbc98ac6d6404adf6e3a625ff">ssm_now</a></div><div class="ttdeci">ssm_time_t ssm_now(void)</div><div class="ttdoc">Return the current model time. </div><div class="ttdef"><b>Definition:</b> ssm-scheduler.c:179</div></div>
+<div class="ttc" id="group__all_html_gaf8c317a42292b61c93aae91e59118a46"><div class="ttname"><a href="group__all.html#gaf8c317a42292b61c93aae91e59118a46">container_of</a></div><div class="ttdeci">#define container_of(ptr, type, member)</div><div class="ttdef"><b>Definition:</b> ssm.h:403</div></div>
+<div class="ttc" id="group__all_html_gad74c026bbc98ac6d6404adf6e3a625ff"><div class="ttname"><a href="group__all.html#gad74c026bbc98ac6d6404adf6e3a625ff">ssm_now</a></div><div class="ttdeci">ssm_time_t ssm_now(void)</div><div class="ttdoc">Return the current model time. </div><div class="ttdef"><b>Definition:</b> ssm-scheduler.c:182</div></div>
 <div class="ttc" id="group__all_html_gaf0599e969847088348147d8fb9a7bd82"><div class="ttname"><a href="group__all.html#gaf0599e969847088348147d8fb9a7bd82">ssm_priority_t</a></div><div class="ttdeci">uint32_t ssm_priority_t</div><div class="ttdoc">Thread priority. </div><div class="ttdef"><b>Definition:</b> ssm.h:112</div></div>
 </div><!-- fragment -->
 </div>
@@ -2115,7 +2115,7 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">var</td><td>Variable to schedule: non-NULL </td></tr>
-    <tr><td class="paramname">later</td><td>Event time; must be in the future (greater than <a class="el" href="ssm-scheduler_8c.html#a2b2e93b2d3f5db60cd2893861ae7e21b" title="Note that this starts out uninitialized. ">now</a>) </td></tr>
+    <tr><td class="paramname">later</td><td>Event time; must be in the future (greater than <a class="el" href="ssm-scheduler_8c.html#a2b2e93b2d3f5db60cd2893861ae7e21b" title="The current model time. ">now</a>) </td></tr>
   </table>
   </dd>
 </dl>
@@ -2149,7 +2149,8 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Indicate writing to a variable should trigger a routine. </p>
-<p>Add a trigger to a variable's list of triggers. When the scheduled variable is written, the scheduler will run the trigger's routine routine </p>
+<p>Add a trigger to a variable's list of triggers. When the scheduled variable is written, the scheduler will run the trigger's routine routine.</p>
+<p>If a routine calls <a class="el" href="group__all.html#ga2ab8d946e7023a827985fc75ce7ceb64" title="Indicate writing to a variable should trigger a routine. ">ssm_sensitize()</a> on a trigger, it must call <a class="el" href="group__all.html#ga919320e80a8d110f7c42a104b8075f89" title="Disable a sensitized routine. ">ssm_desensitize()</a> on the trigger if it ever calls <a class="el" href="group__all.html#ga2e456c7ed667e9b3b9ff460653c5746e" title="Deallocate an activation record; return to caller if we were the last child. ">ssm_leave()</a> to ensure a terminated routine is never inadvertantly triggered. </p>
 
 </div>
 </div>
@@ -2170,8 +2171,8 @@ Variables</h2></td></tr>
 
 <p>Run the system for the next scheduled instant. </p>
 <p>Typically run by the platform code, not the SSM program per se.</p>
-<p>Advance <a class="el" href="ssm-scheduler_8c.html#a2b2e93b2d3f5db60cd2893861ae7e21b" title="Note that this starts out uninitialized. ">now</a> to the time of the earliest event in the queue, if any.</p>
-<p>Remove every event at the head of the event queue scheduled for <a class="el" href="ssm-scheduler_8c.html#a2b2e93b2d3f5db60cd2893861ae7e21b" title="Note that this starts out uninitialized. ">now</a>, update the variable's current value by calling its (type-specific) update function, and schedule all the triggers in the activation queue.</p>
+<p>Advance <a class="el" href="ssm-scheduler_8c.html#a2b2e93b2d3f5db60cd2893861ae7e21b" title="The current model time. ">now</a> to the time of the earliest event in the queue, if any.</p>
+<p>Remove every event at the head of the event queue scheduled for <a class="el" href="ssm-scheduler_8c.html#a2b2e93b2d3f5db60cd2893861ae7e21b" title="The current model time. ">now</a>, update the variable's current value by calling its (type-specific) update function, and schedule all the triggers in the activation queue.</p>
 <p>Remove the activation record in the activation record queue with the lowest priority number and execute its "step" function. </p>
 
 </div>
